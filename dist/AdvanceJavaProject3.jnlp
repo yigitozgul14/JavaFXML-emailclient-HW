@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="AdvanceJavaProject3.jnlp">
+  <information>
+    <title>AdvanceJavaProject3</title>
+    <vendor>yigitt</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="AdvanceJavaProject3.jar" size="25815" download="eager" />
+    <jar href="lib\javax.mail.jar" size="659033" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="advancejavaproject3.AdvanceJavaProject3"  name="AdvanceJavaProject3" />
+  <update check="always"/>
+</jnlp>

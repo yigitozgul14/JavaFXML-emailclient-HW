@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" 
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="advancejavaproject3.FXMLDocumentController">
+
+
+    <top>
+        <VBox spacing="5">
+            <children>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <children>
+                        <Button fx:id="refreshButton" text="Refresh" />
+                        <Button fx:id="composeButton" text="Compose New" />
+                        <Button fx:id="replyButton" text="Reply" />
+                        <Button fx:id="newHostButton" text="New Host" />
+                        <Label text="Select your host:" />
+                        <ComboBox fx:id="hostComboBox" promptText="Select host" prefWidth="200" />
+                    </children>
+                    <padding><Insets top="10" left="10" bottom="5" right="10"/></padding>
+                </HBox>
+                <HBox>
+                    <children>
+                        <Label fx:id="currentHostLabel" text="Current host: Not selected" />
+                    </children>
+                    <padding><Insets top="0" left="10" bottom="10" right="10"/></padding>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+
+
+    <left>
+        <VBox spacing="5">
+            <children>
+                <Label text="Folders" />
+                <ListView fx:id="folderListView" prefWidth="120" />
+            </children>
+            <padding><Insets top="10" left="10" bottom="10" right="10"/></padding>
+        </VBox>
+    </left>
+
+
+    <center>
+        <VBox spacing="5">
+            <children>
+                <Label text="Messages" />
+                <TableView fx:id="emailTableView" VBox.vgrow="ALWAYS" />
+            </children>
+            <padding><Insets top="10" left="10" bottom="10" right="10"/></padding>
+        </VBox>
+    </center>
+
+
+    <right>
+        <VBox spacing="5">
+            <children>
+                <Label text="Selected message details" />
+
+                <GridPane hgap="5" vgap="5">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT"/>
+                        <ColumnConstraints hgrow="ALWAYS"/>
+                    </columnConstraints>
+
+                    <children>
+                        <Label text="Sender:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="senderField" editable="false"
+                                   GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Subject:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="subjectField" editable="false"
+                                   GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <Label text="Date:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <TextField fx:id="dateField" editable="false"
+                                   GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                    </children>
+                </GridPane>
+
+                <Label text="Body:" />
+                <TextArea fx:id="messageBodyArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS" />
+            </children>
+
+            <padding><Insets top="10" left="10" bottom="10" right="10"/></padding>
+        </VBox>
+    </right>
+
+</BorderPane>
